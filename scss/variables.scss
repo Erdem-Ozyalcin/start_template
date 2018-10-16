@@ -1,0 +1,134 @@
+//  ##   ##    ###    #####    ##    ###    #####   ##      #####   ####  
+//  ##   ##   ## ##   ##  ##   ##   ## ##   ##  ##  ##      ##     ##     
+//  ##   ##  ##   ##  #####    ##  ##   ##  #####   ##      #####   ###   
+//   ## ##   #######  ##  ##   ##  #######  ##  ##  ##      ##        ##  
+//    ###    ##   ##  ##   ##  ##  ##   ##  #####   ######  #####  ####  
+
+//Breakpoints
+//-----------------------------------------------
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 550px;
+
+//min width
+//-----------------------------------------------
+$bp-xs : "min-width:" + $xs;
+$bp-sm : "min-width:" + $sm;
+$bp-md : "min-width:" + $md;
+$bp-lg : "min-width:" + $lg;
+
+//max width
+//-----------------------------------------------
+$bp-max-xs : "max-width: " + ($xs - 1);
+$bp-max-sm : "max-width: " + ($sm - 1);
+$bp-max-md : "max-width: " + ($md - 1);
+$bp-max-lg : "max-width: " + ($lg - 1);
+
+
+//Media Query Gridlex Max width
+//-----------------------------------------------
+$gl-mq-list: (
+        lg: ($lg - 1),
+        md: ($md - 1),
+        sm: ($sm - 1),
+        xs: ($xs - 1)
+) !default;
+$gl-gutter:    1.6em !default; // Col spacing Total left + right
+$gl-gutter-vertical:    1.6rem !default; //Col spacing bot
+
+
+//Container Variables 
+//-----------------------------------------------
+$container-max-widths: ( phone: 540px, tablet: 720px, desktop: 960px, desktophd: 1140px) !default;
+$grid-breakpoints: ( zero: 0, phone: $xs, tablet: $sm, desktop: $md, desktophd: $lg) !default;
+$grid-spacing-width: $gl-gutter;
+
+
+//Colors
+//-----------------------------------------------
+$p-color: #3d3d3d;
+$white:#ffffff;
+$black: #000000;
+$gray: #d3d3d3;
+$primary-color: tomato;
+$secondary-color: #394770;
+
+//Typography
+//-----------------------------------------------
+$font-family:  Arial, sans-serif;
+$font-family-2:  "Palatino Linotype", "Book Antiqua", Palatino, serif;
+$extrabold:900;
+$bold: 700;
+$semibold: 600;
+$regular: 400;
+$light: 300;
+$p-font-size: 16px;
+$p-line-height: 145%;
+
+//Headings 
+$h1-font-size: 34px;
+$h1-line-height: 130%;
+$h2-font-size:30px;
+$h2-line-height: 130%;
+$h3-font-size:26px;
+$h3-line-height: 130%;
+$heading-primary-color: darken($p-color,10%);
+
+//Navigation 
+//-----------------------------------------------
+//---------- Colors
+$link-color: $black;
+$hover-color: $white; //Color of hover navigation link
+$active-color: $white; //Color of active navigation link
+$hover-bg-color: $secondary-color; //Background Color of hover navigation link
+$active-bg-color: $primary-color; //Background Color of active navigation link
+$dropdown-bg-color :#fdfdfd; //Background color of Dropdown
+$toggle-color: $secondary-color; //Color for toggle button on mobile
+
+//---------- Typography
+$nav-font-family: $font-family; //Font family of the Navigation links
+$nav-font-size: 14px; // Font size of the Navigation links
+$nav-line-height: 19px; // Line height of the Navigation links
+$nav-text-transform: inherit; //uppercase - lowercase - inherit 
+
+
+//Sticky footer 
+//-----------------------------------------------
+$height-footer-mobile: auto;
+$height-footer-tablet: auto;
+$height-footer-desktop: auto;
+$height-footer-desktophd: auto;
+
+
+//Spacing
+//-----------------------------------------------
+$spacing-bot: 30px;
+$spacing-bot-sm: 60px;
+$spacing-top: 30px;
+$spacing-top-sm: 60px;
+$spacing-bot-small: 30px;
+$spacing-top-small: 30px;
+
+$headings-spacing-bot: 25px;
+$p-spacing-bot: 25px;
+$ul-spacing-bot:20px;
+$li-spacing-bot:15px;
+
+
+// General
+//-----------------------------------------------
+$default-radius: 10px;
+
+
+// BTN
+//-----------------------------------------------
+$btn-font-family: $font-family;
+$btn-font-weight: $bold;
+$btn-font-size: $p-font-size;
+$btn-txt-transform: inherit; //uppercase - lowercase - inherit 
+$btn-padding: 8px 25px;
+$btn-large-padding: 13px 35px;
+$btn-small-padding: 6px 15px;
+$btn-radius:$default-radius;
+

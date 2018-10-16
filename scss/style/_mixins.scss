@@ -1,0 +1,47 @@
+//variables 
+$container-max-widths: ( 
+    phone: 540px, 
+    tablet: 720px, 
+    desktop: 960px, 
+    desktophd: 1140px) !default;
+  $grid-breakpoints: ( zero: 0, 
+  phone: 550px, 
+  tablet: 768px, 
+  desktop: 992px, 
+  desktophd: 1200px) !default;
+ 
+  
+  //mixins
+  @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min !=0, $min, null);
+  }
+  
+  @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+      @media (min-width: $min) {
+        @content;
+      }
+    }
+    @else {
+      @content;
+    }
+  }
+  
+  @mixin make-container() {
+    width: 100%;
+    padding-right: ($grid-spacing-width / 2);
+    padding-left: ($grid-spacing-width / 2);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint,
+    $container-max-width in $max-widths {
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
+        max-width: $container-max-width;
+      }
+    }
+  }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+    <script>
+        function changeClass(elem, className1, className2) {
+            elem.className = (elem.className == className1) ? className2 : className1;
+        }
+    </script>
+</head>
+<body>
+     <!--Navigation-->
+    <nav class="navigation">
+        <div class="logo">
+            <a href="#">
+                Logo
+                <!--<img src="images/logo.png" alt="xxxx">-->
+            </a>
+        </div>
+        <div id="navToggle" class="closed" onclick="changeClass(navBlock,'open','closed');changeClass(navToggle,'open','closed');">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="navBlock" class="nav-block closed">
+
+            <ul class="nav-links">
+                <li class="dropdown active" >
+                    <a href="#" class="dropdown-btn">Dropdown</a>
+                    <ul class="dropdown-links">
+                        <li class="active"><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" >Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--/Navigation-->
+
+    <main>
+        
+    </main>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>

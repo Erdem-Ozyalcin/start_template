@@ -1,0 +1,217 @@
+.navigation {
+  z-index: 9999;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .logo {
+    padding: 12px 2px;
+    width: 150px;
+    float: left;
+    @media screen and ($bp-md) {
+      width: 194px;
+    }
+    @media screen and ($bp-lg) {
+      width: 250px;
+    }
+  }
+  #navToggle {
+    float: right;
+  }
+  #navBlock {
+    clear: both;
+  }
+  @media screen and ($bp-sm) {
+    #navBlock {
+      clear: none;
+      float: right;
+    }
+  }
+}
+
+// toggle
+#navToggle {
+  display: block;
+  @media screen and ($bp-sm) {
+    display: none;
+  }
+}
+
+#navToggle {
+  border: 1px solid $toggle-color;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  &:hover {
+    cursor: pointer;
+  }
+  &.open {
+    background: $toggle-color;
+    span {
+      border-color: white;
+    }
+  }
+  span {
+    border: 2px solid $toggle-color;
+    width: 28px;
+    display: block;
+    margin: 6px auto;
+    border-radius: 2px;
+    &:first-child {
+      margin-top: 10px;
+    }
+  }
+}
+
+//  ##      ##  ##     ##  ##  ##   ####
+//  ##      ##  ####   ##  ## ##   ##
+//  ##      ##  ##  ## ##  ####     ###
+//  ##      ##  ##    ###  ## ##      ##
+//  ######  ##  ##     ##  ##  ##  ####
+
+@media screen and ($bp-max-sm) {
+  #navBlock.closed {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transition: all 300ms;
+  }
+  #navBlock.open {
+    transition: all 600ms;
+    clear: both;
+    border-top: 1px solid $gray;
+    margin-top: 65px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background: white;
+  }
+}
+
+ul.nav-links {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  margin-bottom: 0px;
+  list-style: none;
+  @media screen and ($bp-sm) {
+    width: 100%;
+  }
+  li {
+    list-style: none;
+    display: block;
+    margin-bottom: 0px;
+    border-bottom: 1px solid lighten($black, 70%);
+    text-indent: 0;
+    padding: 0;
+    &:before {
+      display: none;
+    }
+    @media screen and ($bp-sm) {
+      display: inline-block;
+      border-bottom: 0px solid lighten($black, 70%);
+      padding: 0;
+    }
+    &.active > a {
+      color: $active-color;
+      background: $active-bg-color;
+    }
+
+    & > a:hover {
+      color: $hover-color;
+      background: $hover-bg-color;
+    }
+    a {
+      font-family: $nav-font-family;
+      font-size: $nav-font-size;
+      line-height: $nav-line-height;
+      padding: 12px 30px;
+      display: block;
+      text-decoration: none;
+      text-transform: $nav-text-transform;
+      color: $link-color;
+      font-weight: $bold;
+      @media screen and ($bp-sm) {
+        padding: 15px 10px;
+      }
+      @media screen and ($bp-md) {
+        font-size: $nav-font-size;
+        padding: 20px 10px;
+      }
+      @media screen and ($bp-lg) {
+        padding: 25px;
+      }
+    }
+    //  ####    #####     #####   #####   ####     #####   ##      ##  ##     ##
+    //  ##  ##  ##  ##   ##   ##  ##  ##  ##  ##  ##   ##  ##      ##  ####   ##
+    //  ##  ##  #####    ##   ##  #####   ##  ##  ##   ##  ##  ##  ##  ##  ## ##
+    //  ##  ##  ##  ##   ##   ##  ##      ##  ##  ##   ##  ##  ##  ##  ##    ###
+    //  ####    ##   ##   #####   ##      ####     #####    ###  ###   ##     ##
+    &.dropdown {
+      display: block;
+      @media screen and ($bp-sm) {
+        position: relative;
+        display: inline-block;
+      }
+      ul.dropdown-links {
+        background-color: $dropdown-bg-color;
+        margin: 0px;
+        padding: 0px;
+        z-index: 1;
+        opacity: 0;
+        height: 0;
+        visibility: hidden;
+        list-style: none;
+        @media screen and ($bp-sm) {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        li {
+          display: block;
+          @media screen and ($bp-sm) {
+            text-align: left;
+          }
+          &:last-child {
+            border-bottom: 0px;
+          }
+          &.active{
+            border-top: 1px solid $white;
+          }
+          a {
+            white-space: nowrap;
+            @media screen and ($bp-max-sm) {
+              padding: 12px 40px;
+            }
+          }
+        }
+      }
+      &:hover .dropdown-links {
+        opacity: 1;
+        height: auto;
+        transition: opacity 600ms;
+        visibility: visible;
+      }
+    }
+    &:first-child {
+      ul.dropdown-links {
+        @media screen and ($bp-sm) {
+          right: inherit;
+          left: 0;
+        }
+        li {
+          @media screen and ($bp-sm) {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

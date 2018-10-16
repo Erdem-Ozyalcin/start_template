@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+    <script>
+        function changeClass(elem, className1, className2) {
+            elem.className = (elem.className == className1) ? className2 : className1;
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <main>
+
+
+        <!-- #region - Content-->
+        <div class="container spacing-top spacing-bot-small">
+            <!-- #region - Succes message-->
+            <div class="succes-message" id="succes">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <div class="succes-message-title">
+                    <img src="/static/icons/icon-succes.svg" alt="Bedankt">
+                    <strong>Bedankt voor je vraag. </strong>
+                </div>
+                <div class="succes-message-content">
+                    <p> Onze medewerkers bekijken deze zo snel mogelijk en nemen terug contact op.</p>
+                    <p>
+                        Met vriendelijke groeten
+                        <br> Carmans nv.
+                    </p>
+                </div>
+            </div>
+            <!-- #endregion - Succes message-->
+
+            <div class="grid">
+                <div class="col-7_xs-12_sm-12_md-12">
+                    <form action="" method="post" class="form-style">
+                        <ul>
+                            <li class="field-divided">
+                                <label>Naam:
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" name="field1" />
+                            </li>
+                            <li class="field-divided">
+                                <label>Bedrijf:
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" name="field3" />
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="field-long">
+                                <label>Adres:
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" name="field3" />
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="field-divided">
+                                <label>Gemeente:
+                                </label>
+                                <input type="text" name="field1" />
+                            </li>
+                            <li class="field-divided">
+                                <label>Postcode:
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" name="field3" />
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li class="field-divided">
+                                <label>Telefoon:
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="phone" name="field3" class="error" />
+                            </li>
+                            <li class="field-divided">
+                                <label>E-mail:
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="email" name="field3" />
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <label>Ik heb een vraag over:
+                                    <span class="required">*</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="field-divided">
+                                <input type="checkbox" name="optie1" id="optie1" class="error">
+                                <label for="optie1">optie1</label>
+                            </li>
+                            <li class="field-divided">
+                                <input type="checkbox" name="optie2" id="optie2">
+                                <label for="optie2">optie2</label>
+                            </li class="field-divided">
+                            <li class="field-divided">
+                                <input type="checkbox" name="optie3" id="optie3">
+                                <label for="optie3">optie3</label>
+                            </li class="field-divided">
+                            <li class="field-divided">
+                                <input type="checkbox" name="optie4" id="optie4">
+                                <label for="optie4">optie4</label>
+                            </li>
+                            <li class="field-divided">
+                                <input type="checkbox" name="optie5" id="optie5">
+                                <label for="optie5">optie5</label>
+                            </li>
+                            <li class="field-divided">
+                                <input type="checkbox" name="optie6" id="optie6">
+                                <label for="optie6">optie6</label>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <label>Uw Bericht
+                                    <span class="required">*</span>
+                                </label>
+                                <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                            </li>
+                            <li>
+                                <input type="submit" value="Verzenden" class="btn btn-primary" />
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="col-5_xs-12_sm-12_md-12">
+
+                </div>
+            </div>
+        </div>
+        <!-- #endregion - Content-->
+
+    </main>
+
+    <footer>
+       
+    </footer>
+
+
+    <script src="/static/js/general.min.js"></script>
+</body>
+
+</html>

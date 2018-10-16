@@ -1,0 +1,755 @@
+//=====================================
+//
+//  ######  #####  ##    ##  ######
+//    ##    ##      ##  ##     ##
+//    ##    #####    ####      ##
+//    ##    ##      ##  ##     ##
+//    ##    #####  ##    ##    ##
+//
+//=====================================
+body {
+  font-size: $p-font-size;
+  line-height: $p-line-height;
+  font-family: $font-family;
+  color: $p-color;
+}
+
+h1 {
+  font-size: $h1-font-size - 5;
+  line-height: $h1-line-height;
+  font-family: $font-family-2;
+  font-weight: $bold;
+  text-transform: inherit;
+  margin-bottom: $headings-spacing-bot;
+  color: $heading-primary-color;
+
+  @media screen and ($bp-sm) {
+    margin-bottom: 30px;
+    font-size: $h1-font-size;
+  }
+
+  &.small-h1 {
+    font-size: 26px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h2 {
+  font-size: $h2-font-size - 6;
+  line-height: $h2-line-height;
+  font-family: $font-family-2;
+  font-weight: $bold;
+  text-transform: inherit;
+  color: $heading-primary-color;
+  margin-bottom: $headings-spacing-bot;
+
+  @media screen and ($bp-sm) {
+    margin-bottom: 30px;
+    font-size: $h2-font-size;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h3 {
+  font-size: $h3-font-size - 6;
+  line-height: $h3-line-height;
+  font-family: $font-family-2;
+  font-weight: $bold;
+  text-transform: inherit;
+  color: $heading-primary-color;
+  margin-bottom: $headings-spacing-bot;
+
+  @media screen and ($bp-sm) {
+    margin-bottom: 30px;
+    font-size: $h3-font-size;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h4 {
+  font-size: $h3-font-size - 8;
+  line-height: $h3-line-height;
+  font-family: $font-family-2;
+  font-weight: $bold;
+  text-transform: inherit;
+  margin-bottom: $headings-spacing-bot;
+  color: $heading-primary-color;
+  @media screen and ($bp-sm) {
+    font-size: $h3-font-size - 4;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+h5 {
+  font-size: $p-font-size + 3;
+  line-height: $p-line-height;
+  font-family: $font-family-2;
+  font-weight: $bold;
+  text-transform: inherit;
+  margin-bottom: $headings-spacing-bot;
+  color: $heading-primary-color;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+h6 {
+  font-size: $p-font-size + 2;
+  line-height: $p-line-height;
+  font-family: $font-family-2;
+  font-weight: $bold;
+  text-transform: inherit;
+  margin-bottom: $headings-spacing-bot;
+  color: $heading-primary-color;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+p {
+  margin-bottom: $p-spacing-bot;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+strong {
+  font-weight: inherit;
+}
+
+.highlight {
+  font-weight: 700;
+}
+
+small,
+.font-small {
+  font-size: 80%;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 50%;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: 50%;
+}
+
+em {
+  font-style: italic;
+}
+
+.tel {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all 200ms ease-in;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: $ul-spacing-bot;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    padding-left: 1em;
+    text-indent: -1.1em;
+    margin-bottom: $li-spacing-bot;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: "• ";
+      color: $primary-color;
+      margin-right: 7px;
+    }
+
+    li {
+      &:before {
+        content: "∘ ";
+        color: $primary-color;
+      }
+    }
+    ul {
+      margin-top: $li-spacing-bot;
+    }
+  }
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 15px;
+  margin-left: 20px;
+  margin-bottom: $ul-spacing-bot;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  li {
+    margin-bottom: $li-spacing-bot;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.list-2-column {
+  @media screen and ($bp-lg) {
+    column-count: 2;
+    margin-left: -5px;
+    margin-right: -5px;
+    li {
+      padding-right: 5px;
+      padding-left: 25px;
+    }
+  }
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 2px #eeeeee;
+  margin: 3rem 0;
+}
+
+blockquote {
+  border-left: solid 4px #eeeeee;
+  font-style: italic;
+  margin: 0 0 2rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+  font-family: $font-family-2;
+  font-size: $p-font-size + 2;
+  line-height: $p-line-height + 20%;
+}
+
+table {
+  overflow-y: auto;
+  width: 100%;
+  margin-bottom: 25px;
+  th,
+  td {
+    padding: 8px 10px;
+  }
+  th {
+    font-family: $font-family-2;
+    font-size: $p-font-size + 2;
+    line-height: $p-line-height + 20%;
+    font-weight: $bold;
+    text-align: center;
+  }
+  tr {
+    border: solid 1px #eeeeee;
+    border-left: 0;
+    border-right: 0;
+    &:nth-child(odd) {
+      background-color: rgba(220, 220, 220, 0.25);
+    }
+  }
+}
+.responsive-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+//---Text transform
+//=========================================================
+.color-primary {
+  color: $primary-color;
+}
+
+.color-secondary {
+  color: $secondary-color;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+//  #####   ######  ##     ##
+//  ##  ##    ##    ####   ##
+//  #####     ##    ##  ## ##
+//  ##  ##    ##    ##    ###
+//  #####     ##    ##     ##
+.btn {
+  text-decoration: none !important;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  text-transform: $btn-txt-transform;
+  font-size: $btn-font-size;
+  line-height: $btn-font-size;
+  padding: $btn-padding;
+  border: 1px solid transparent;
+  border-radius: $default-radius;
+  display: inline-block;
+  transition: all ease-in-out 300ms;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &.btn-large {
+    padding: $btn-large-padding;
+    border-radius: $default-radius;
+    font-size: $btn-font-size + 3;
+  }
+
+  &.btn-small {
+    padding: $btn-small-padding;
+    border-radius: $default-radius - 2;
+    font-size: $btn-font-size - 3;
+  }
+
+  &.btn-full-width {
+    width: 100%;
+  }
+}
+
+.btn-primary {
+  background: $primary-color !important;
+  color: $white !important;
+  border-color: $primary-color !important;
+
+  &:hover {
+    color: $primary-color !important;
+    background: $white !important;
+    border-color: $primary-color !important;
+  }
+}
+
+.btn-primary-o {
+  background: transparent !important;
+  color: $primary-color !important;
+  border-color: $primary-color !important;
+
+  &:hover {
+    color: $white !important;
+    background: $primary-color !important;
+    border-color: $white !important;
+  }
+}
+
+.btn-secondary {
+  background: $secondary-color !important;
+  color: $white !important;
+  border-color: $secondary-color !important;
+
+  &:hover {
+    color: $secondary-color !important;
+    background: $white !important;
+    border-color: $secondary-color !important;
+  }
+}
+
+.btn-secondary-o {
+  background: transparent !important;
+  color: $secondary-color !important;
+  border-color: $secondary-color !important;
+
+  &:hover {
+    color: $white !important;
+    background: $secondary-color !important;
+    border-color: $white !important;
+  }
+}
+
+.btns-group {
+  margin-left: 0px;
+  @media screen and ($bp-max-sm) {
+    margin-top: 25px;
+  }
+
+  @media screen and ($bp-sm) {
+    display: block !important;
+  }
+
+  li {
+    padding-left: 0;
+    text-indent: 0;
+    margin-bottom: 10px;
+
+    @media screen and ($bp-sm) {
+      margin-right: 5px;
+      display: inline-block;
+    }
+
+    &:before {
+      display: none;
+    }
+
+    a {
+      white-space: nowrap;
+      @media screen and ($bp-max-sm) {
+        display: block;
+        padding: 10px 9px;
+      }
+    }
+  }
+}
+
+//   ####   #####   ##     ##  ######    ###    ##  ##     ##  #####  #####
+//  ##     ##   ##  ####   ##    ##     ## ##   ##  ####   ##  ##     ##  ##
+//  ##     ##   ##  ##  ## ##    ##    ##   ##  ##  ##  ## ##  #####  #####
+//  ##     ##   ##  ##    ###    ##    #######  ##  ##    ###  ##     ##  ##
+//   ####   #####   ##     ##    ##    ##   ##  ##  ##     ##  #####  ##   ##
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.container-fluid {
+  @include make-container();
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//  ##   ##  ##   ####  ##  #####   ##  ##      ##  ######  ##    ##
+//  ##   ##  ##  ##     ##  ##  ##  ##  ##      ##    ##     ##  ##
+//  ##   ##  ##   ###   ##  #####   ##  ##      ##    ##      ####
+//   ## ##   ##     ##  ##  ##  ##  ##  ##      ##    ##       ##
+//    ###    ##  ####   ##  #####   ##  ######  ##    ##       ##
+//Visible when windows size is smaller then (xs, sm, md, lg)
+.xs-visible {
+  @media screen and ($bp-xs) {
+    display: none !important;
+  }
+}
+
+.sm-visible {
+  @media screen and ($bp-sm) {
+    display: none !important;
+  }
+}
+
+.md-visible {
+  @media screen and ($bp-md) {
+    display: none !important;
+  }
+}
+
+.lg-visible {
+  @media screen and ($bp-lg) {
+    display: none !important;
+  }
+}
+
+//Visible when windows size is larger then (xs, sm, md, lg)
+.xs-hidden {
+  @media screen and ($bp-max-xs) {
+    display: none !important;
+  }
+}
+
+.sm-hidden {
+  @media screen and ($bp-max-sm) {
+    display: none !important;
+  }
+}
+
+.md-hidden {
+  @media screen and ($bp-max-md) {
+    display: none !important;
+  }
+}
+
+.lg-hidden {
+  @media screen and ($bp-max-lg) {
+    display: none !important;
+  }
+}
+
+//Centering all max-width- classes.
+[class*="max-width-"] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and ($bp-sm) {
+  .max-width-20 {
+    max-width: 40%;
+  }
+
+  .max-width-40 {
+    max-width: 40%;
+  }
+
+  .max-width-60 {
+    max-width: 60%;
+  }
+
+  .max-width-80 {
+    max-width: 80%;
+  }
+
+  .max-width-530 {
+    max-width: 530px;
+  }
+}
+
+.max-width-100 {
+  max-width: 100%;
+}
+
+//Used for align content with container in full width container
+//Use with .max-width-530
+.max-width-mr-auto {
+  @media screen and ($bp-md) {
+    margin-right: auto;
+    margin-left: inherit;
+  }
+}
+
+.max-width-ml-auto {
+  @media screen and ($bp-md) {
+    margin-right: inherit;
+    margin-left: auto;
+  }
+}
+
+//   ####  #####     ###     ####  ##  ##     ##   ####
+//  ##     ##  ##   ## ##   ##     ##  ####   ##  ##
+//   ###   #####   ##   ##  ##     ##  ##  ## ##  ##  ###
+//     ##  ##      #######  ##     ##  ##    ###  ##   ##
+//  ####   ##      ##   ##   ####  ##  ##     ##   ####
+.spacing-top {
+  padding-top: $spacing-top;
+
+  @media screen and ($bp-sm) {
+    padding-top: $spacing-top-sm;
+  }
+}
+
+.spacing-bot {
+  padding-bottom: $spacing-bot;
+
+  @media screen and ($bp-sm) {
+    padding-bottom: $spacing-bot-sm;
+  }
+}
+
+.spacing-top-small {
+  padding-top: $spacing-bot-small;
+}
+
+.spacing-bot-small {
+  padding-bottom: $spacing-bot-small;
+}
+
+.bg-spacing {
+  padding: 2em;
+
+  @media screen and ($bp-sm) {
+    padding: 3em;
+  }
+}
+
+.padding-reset {
+  padding: 0;
+}
+
+.margin-reset {
+  margin: 0;
+}
+
+//    ###    ##      ##   ####    ##     ##
+//   ## ##   ##      ##  ##       ####   ##
+//  ##   ##  ##      ##  ##  ###  ##  ## ##
+//  #######  ##      ##  ##   ##  ##    ###
+//  ##   ##  ######  ##   ####    ##     ##
+.txt-right {
+  text-align: right;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.fl-right {
+  float: right;
+}
+
+.fl-left {
+  float: left;
+}
+
+//   ####    #####  ##     ##  #####  #####      ###    ##
+//  ##       ##     ####   ##  ##     ##  ##    ## ##   ##
+//  ##  ###  #####  ##  ## ##  #####  #####    ##   ##  ##
+//  ##   ##  ##     ##    ###  ##     ##  ##   #######  ##
+//   ####    #####  ##     ##  #####  ##   ##  ##   ##  ######
+* {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//Images
+img {
+  max-width: 100%;
+}
+
+.img-wrapper {
+  line-height: 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.img-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.img-left,
+.img-right {
+  width: 200px;
+}
+
+.img-left {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+}
+.img-right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+//Background
+.bg-gray {
+  background-color: #eeeeee;
+}
+
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.bg-secondary {
+  background-color: $secondary-color;
+}
+
+//Iframs
+//responsive Iframe
+[class*="iframe-wrapper"] {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+// 16x9 Aspect Ratio
+.iframe-wrapper-16x9 {
+  padding-bottom: 56.25%;
+}
+
+//4x3 Aspect Ratio
+.iframe-wrapper-4x3 {
+  padding-bottom: 75%;
+}
+
+.iframe-wrapper-300 {
+  padding-bottom: 300px;
+}
+
+[class*="iframe-wrapper"] iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.default-radius {
+  border-radius: $default-radius;
+  overflow: hidden;
+}
+
+//   ####  ##      ##  ####    #####  #####
+//  ##     ##      ##  ##  ##  ##     ##  ##
+//   ###   ##      ##  ##  ##  #####  #####
+//     ##  ##      ##  ##  ##  ##     ##  ##
+//  ####   ######  ##  ####    #####  ##   ##
+.lSSlideOuter .lSPager.lSpg {
+  > li {
+    text-indent: 0;
+    padding: 0 2.5px;
+    &::before {
+      display: none;
+    }
+    &:hover,
+    &.active {
+      a {
+        background-color: $secondary-color;
+      }
+    }
+    a {
+      background-color: $primary-color;
+      height: 12px;
+      width: 12px;
+    }
+  }
+}
+
+.lSAction > a {
+  background-image: url(/static/icons/swiper-controls.png);
+}
+
+//Lightbox
+.gnrl-gallery {
+  a {
+    display: inline-block;
+    &:hover {
+      transform: scale(1.05, 1.05);
+    }
+  }
+}

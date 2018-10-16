@@ -1,0 +1,34 @@
+  html, body {
+    height: 100%;
+  }
+  main {
+    min-height: 100%;
+    margin-bottom: -$height-footer-mobile; 
+    @media screen and ($bp-sm) {
+        margin-bottom: -$height-footer-tablet; 
+    }
+    @media screen and ($bp-md) {
+        margin-bottom: -$height-footer-desktop; 
+    }
+    @media screen and ($bp-lg) {
+        margin-bottom: -$height-footer-desktophd; 
+    }
+  }
+  main:after {
+    content: "";
+    display: block;
+  }
+ 
+  footer, main:after {
+    height: $height-footer-mobile; 
+    @media screen and ($bp-sm) {
+        height: $height-footer-tablet; 
+    }
+    @media screen and ($bp-md) {
+        height: $height-footer-desktop; 
+    }
+    @media screen and ($bp-lg) {
+        height: $height-footer-desktophd; 
+    }
+
+  }

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+    <script>
+        function changeClass(elem, className1, className2) {
+            elem.className = (elem.className == className1) ? className2 : className1;
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!--Navigation-->
+        <nav class="navigation">
+            <div class="logo">
+                <a href="#">
+                    Logo
+                    <!--<img src="images/logo.png" alt="xxxx">-->
+                </a>
+            </div>
+            <div id="navToggle" class="closed" onclick="changeClass(navBlock,'open','closed');changeClass(navToggle,'open','closed');">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="navBlock" class="nav-block closed">
+
+                <ul class="nav-links">
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-btn">Dropdown</a>
+                        <ul class="dropdown-links">
+                            <li class="active"><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--/Navigation-->
+        <!-- Main -->
+        <main>
+
+            <!-- Post -->
+            <section class="container">
+
+
+                <!-- #region - TEXT-->
+                <h2>Text</h2>
+                <p>This is <span class="highlight">bold</span> and this is <strong>strong</strong>. <br>
+                    This is <em>italic</em> and <em>emphasized</em>. <br>
+                    This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+                    This is <u>underlined</u>. <br>
+                    Finally, this is a <a href="#">link</a>.</p>
+                <hr>
+                <h1>Heading Level 1</h1>
+                <h2>Heading Level 2</h2>
+                <h3>Heading Level 3</h3>
+                <h4>Heading Level 4</h4>
+                <h5>Heading Level 5</h5>
+                <h6>Heading Level 6</h6>
+                <!-- #endregion - TEXT-->
+
+                <hr>
+                <h2 class="color-primary">
+                    Text Primary Color
+                </h2>
+                <p class="color-primary">
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi
+                    integer
+                    non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem
+                    accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
+                </p>
+
+                <h2 class="color-secondary">
+                    Text Secondary Color
+                </h2>
+                <p class="color-secondary">
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi
+                    integer
+                    non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem
+                    accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
+                </p>
+
+                <hr>
+
+                <!-- #region - Txt algin-->
+                <h2>Text align</h2>
+
+                <div class="grid">
+                    <div class="col txt-left">
+                        Text Left
+                        <br><span class='highlight'>Class:</span> txt-left
+                    </div>
+                    <div class="col txt-center">
+                        Text Center <br>
+                        <span class='highlight'>Class:</span>
+                        txt-center
+                    </div>
+                    <div class="col txt-right">
+                        Text Right <br>
+                        <span class='highlight'>Class:</span> txt-right
+                    </div>
+                </div>
+                <!-- #endregion - Txt algin-->
+                <hr>
+                <!-- #region - Spacing-->
+                <h2>Spacing</h2>
+
+                <div class="spacing-top spacing-bot">
+                    <h3>Spacing Top & Bot</h3>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi
+                        integer
+                        non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem
+                        accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+                </div>
+
+                <div class="spacing-top-small spacing-bot-small">
+                    <h3>Spacing Top & Bot Small</h3>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi
+                        integer
+                        non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem
+                        accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+                </div>
+                <!-- #endregion - Spacing-->
+
+                <hr>
+
+                <!-- #region - List-->
+                <h2>Lists</h2>
+                <div class="grid">
+                    <div class="col-6_xs-12_sm-12">
+
+                        <h3>Unordered</h3>
+                        <ul>
+                            <li>Dolor pulvinar etiam.</li>
+                            <li>Sagittis lorem eleifend.</li>
+                            <li>Felis feugiat dolore viverra.</li>
+                            <li>Dolor pulvinar etiam.</li>
+                        </ul>
+
+                        <h3>Alternate</h3>
+                        <ul>
+                            <li>Dolor pulvinar etiam etiam.</li>
+                            <li>Sagittis <br>
+                                adipiscing eleifend.</li>
+                            <li><span class='highlight'>List in 2 columns. Class: ul.list-2-column</span>
+                                <ul class="list-2-column">
+                                    <li>Dolor pulvinar etiam.</li>
+                                    <li>Sagittis lorem eleifend.</li>
+                                    <li>Felis feugiat dolore viverra.</li>
+                                    <li>Dolor pulvinar etiam.</li>
+                                </ul>
+                            </li>
+                            <li>Dolor pulvinar etiam etiam.</li>
+                        </ul>
+
+                    </div>
+                    <div class="col-6_xs-12_sm-12">
+
+                        <h3>Ordered</h3>
+                        <ol>
+                            <li>Dolor pulvinar etiam.</li>
+                            <li>Etiam vel felis at viverra.</li>
+                            <li>Felis enim feugiat magna.</li>
+                            <li>Etiam vel felis nullam.</li>
+                            <li>Felis enim et tempus.</li>
+                        </ol>
+
+                    </div>
+                </div>
+                <!-- #endregion - List-->
+
+                <hr>
+
+                <!-- #region - Blockquote-->
+                <h2>Blockquote</h2>
+                <blockquote>
+                    Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus
+                    euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis
+                    volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus vestibulum.
+                    Blandit adipiscing eu felis.
+                </blockquote>
+                <!-- #endregion - Blockquote-->
+                <hr>
+
+                <!-- #region - Table-->
+                <h2>Table</h2>
+
+                <h3>Default</h3>
+                <table>
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+
+                    <tr>
+                        <td>Item 1</td>
+                        <td>Ante turpis integer aliquet porttitor.</td>
+                        <td>29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item 2</td>
+                        <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                        <td>19.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item 3</td>
+                        <td> Morbi faucibus arcu accumsan lorem.</td>
+                        <td>29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item 4</td>
+                        <td>Vitae integer tempus condimentum.</td>
+                        <td>19.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item 5</td>
+                        <td>Ante turpis integer aliquet porttitor.</td>
+                        <td>29.99</td>
+                    </tr>
+                </table>
+
+
+                <h3>
+                    Responsive
+                </h3>
+                <div class="responsive-table">
+                    <table>
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+
+                        <tr>
+                            <td>Item 1</td>
+                            <td>Ante turpis integer aliquet porttitor.</td>
+                            <td>29.99</td>
+                        </tr>
+                        <tr>
+                            <td>Item 2</td>
+                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                            <td>19.99</td>
+                        </tr>
+                        <tr>
+                            <td>Item 3</td>
+                            <td> Morbi faucibus arcu accumsan lorem.</td>
+                            <td>29.99</td>
+                        </tr>
+                        <tr>
+                            <td>Item 4</td>
+                            <td>Vitae integer tempus condimentum.</td>
+                            <td>19.99</td>
+                        </tr>
+                        <tr>
+                            <td>Item 5</td>
+                            <td>Ante turpis integer aliquet porttitor.</td>
+                            <td>29.99</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- #endregion - Table-->
+                <hr>
+
+                <!-- #region - Buttons-->
+                <h2>Buttons</h2>
+                <h3>Default Buttons</h3>
+
+                <div>
+                    <a href="#" class="btn btn-primary">Primary</a>
+
+                    <a href="#" class="btn btn-secondary">Secondary</a>
+
+                    <a href="#" class="btn btn-primary-o">Primary-O</a>
+
+                    <a href="#" class="btn btn-secondary-o">Secondary-O</a>
+                </div>
+                <br>
+                <h4>
+                    Classes
+                </h4>
+                <div class="grid">
+                    <div class="col">
+                        <p>
+                            btn btn-primary
+                        </p>
+                        <p>
+                            btn btn-secondary
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            btn btn-primary-o
+                        </p>
+                        <p>
+                            btn btn-secondary-o
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="grid">
+                    <div class="col">
+                        <br>
+                        <h3>Size Buttons</h3>
+                        <div>
+                            <a href="#" class="btn btn-primary btn-large">Large</a>
+
+                            <a href="#" class="btn btn-primary btn-small">Small</a>
+                        </div>
+
+                        <br>
+                        <h4>
+                            Classes
+                        </h4>
+                        <p>
+                            Add the class "<span class='highlight'>btn-large</span>" for large button.
+                            <br>
+                            Add the class "<span class='highlight'>btn-small</span>" for small button.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <br>
+                        <h3>Full Size Button</h3>
+                        <div>
+                            <a href="#" class="btn btn-primary btn-full-width ">Full Width</a>
+
+
+                        </div>
+
+                        <br>
+                        <h4>
+                            Classes
+                        </h4>
+                        <p>
+                            Add the class "<span class='highlight'>btn-full-width</span>" for large button.
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <br>
+                <h3>Buttons Group</h3>
+                <ul class="btns-group">
+                    <li><a href="#" class="btn btn-primary">Primary</a></li>
+                    <li> <a href="#" class="btn btn-secondary">Secondary</a></li>
+                </ul>
+                <!-- #endregion - Buttons-->
+
+                <hr>
+
+                <!-- #region - Form-->
+                <h2>Form</h2>
+
+                <form action="" method="post" class="form-style">
+                    <ul>
+                        <li class="field-divided">
+                            <label>Naam:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" name="field1" required />
+                        </li>
+                        <li class="field-divided">
+                            <label>Bedrijf:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" name="field3" required />
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="field-divided">
+                            <label>Adres:
+                            </label>
+                            <input type="text" name="field3" />
+                        </li>
+                        <li class="field-divided">
+                            <select name="" id="" required>
+                                <option value="">-- Maak uw keuzen --</option>
+                                <option value="">Selectie 1</option>
+                                <option value="">Selectie 2</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="field-divided">
+                            <label>Gemeente:
+                            </label>
+                            <input type="text" name="field1" />
+                        </li>
+                        <li class="field-divided">
+                            <label>Postcode:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" name="field3" />
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="field-divided">
+                            <label>Telefoon:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="phone" name="field3" class="error" />
+                        </li>
+                        <li class="field-divided">
+                            <label>E-mail:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="email" name="field3" />
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>Ik heb een vraag over:
+                                <span class="required">*</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="field-divided">
+                            <input type="checkbox" name="optie1" id="optie1" required>
+                            <label for="optie1">optie1</label>
+                        </li>
+                        <li class="field-divided">
+                            <input type="checkbox" name="optie2" id="optie2">
+                            <label for="optie2">optie2</label>
+                        </li class="field-divided">
+                        <li class="field-divided">
+                            <input type="checkbox" name="optie3" id="optie3">
+                            <label for="optie3">optie3</label>
+                        </li class="field-divided">
+                        <li class="field-divided">
+                            <input type="checkbox" name="optie4" id="optie4">
+                            <label for="optie4">optie4</label>
+                        </li>
+                        <li class="field-divided">
+                            <input type="checkbox" name="optie5" id="optie5">
+                            <label for="optie5">optie5</label>
+                        </li>
+                        <li class="field-divided">
+                            <input type="checkbox" name="optie6" id="optie6">
+                            <label for="optie6">optie6</label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>Toestel:
+                                <span class="required">*</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="field-divided">
+                            <input type="radio" name="radio[]" id="radio1">
+                            <label for="radio1">Radio 1</label>
+                        </li>
+                        <li class="field-divided">
+                            <input type="radio" name="radio[]" id="radio2">
+                            <label for="radio2">Radio 2</label>
+                        </li class="field-divided">
+                        <li class="field-divided">
+                            <input type="radio" name="radio[]" id="Radio 3">
+                            <label for="Radio 3">Radio 3</label>
+                        </li class="field-divided">
+
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>Uw Bericht
+                                <span class="required">*</span>
+                            </label>
+                            <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                        </li>
+                        <li>
+                            <input type="submit" value="Verzenden" class="btn btn-primary" />
+                        </li>
+                    </ul>
+                </form>
+                <!-- #endregion - Form-->
+
+                <hr>
+
+                <!-- #region - Image-->
+                <h2>Image</h2>
+                <h3>
+                    Slider
+                </h3>
+                <div class="gnrl-slider">
+                    <div><img src="/static/images/placeholder.jpg" alt=""></div>
+                    <div><img src="/static/images/placeholder.jpg" alt=""></div>
+                    <div><img src="/static/images/placeholder.jpg" alt=""></div>
+                    <div><img src="/static/images/placeholder.jpg" alt=""></div>
+                    <div><img src="/static/images/placeholder.jpg" alt=""></div>
+                    <div><img src="/static/images/placeholder.jpg" alt=""></div>
+                    <div><img src="/static/images/placeholder.jpg" alt=""></div>
+                    <div><img src="/static/images/placeholder.jpg" alt=""></div>
+                    <div><img src="/static/images/placeholder.jpg" alt=""></div>
+                </div>
+                <br>
+
+                <h3>
+                    Lightbox
+                </h3>
+                <div class="gnrl-gallery grid">
+                    <div class="col-4"> <a href="/static/images/placeholder.jpg"> <img src="/static/images/placeholder.jpg"
+                                alt=""></a></div>
+                    <div class="col-4"> <a href="/static/images/placeholder.jpg"> <img src="/static/images/placeholder.jpg"
+                                alt=""></a></div>
+                    <div class="col-4"> <a href="/static/images/placeholder.jpg"> <img src="/static/images/placeholder.jpg"
+                                alt=""></a></div>
+                    <div class="col-4"> <a href="/static/images/placeholder.jpg"> <img src="/static/images/placeholder.jpg"
+                                alt=""></a></div>
+                    <div class="col-4"> <a href="/static/images/placeholder.jpg"> <img src="/static/images/placeholder.jpg"
+                                alt=""></a></div>
+                    <div class="col-4"> <a href="/static/images/placeholder.jpg"> <img src="/static/images/placeholder.jpg"
+                                alt=""></a></div>
+                    <div class="col-4"> <a href="/static/images/placeholder.jpg"> <img src="/static/images/placeholder.jpg"
+                                alt=""></a></div>
+                    <div class="col-4"> <a href="/static/images/placeholder.jpg"> <img src="/static/images/placeholder.jpg"
+                                alt=""></a></div>
+                    <div class="col-4"> <a href="/static/images/placeholder.jpg"> <img src="/static/images/placeholder.jpg"
+                                alt=""></a></div>
+                </div>
+
+
+                <div class="content">
+                    <h4>
+                        Default Image Wrapper
+                    </h4>
+                    <p>
+                        To reset the line-height + width of image 100%. <br>
+                    </p>
+                    <div class="img-wrapper"><img src="/static/images/placeholder.jpg" alt=""></div>
+                    <br>
+
+                    <h4>Left</h4>
+                    <p><img src="/static/images/placeholder.jpg" alt="" width="150" class="img-left ">Lorem ipsum dolor sit
+                        accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante
+                        ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+                        accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus
+                        euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum
+                        primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+                        accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus
+                        euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
+                        iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
+                        Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat
+                        lorem ipsum dolor sit amet dolor consequat.</p>
+                    <div class="clearfix"></div>
+                    <h4>Right</h4>
+                     <p><img src="/static/images/placeholder.jpg" alt="" width="150" class="img-right">Lorem ipsum dolor sit
+                        accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante
+                        ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+                        accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus
+                        euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum
+                        primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+                        accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus
+                        euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
+                        iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
+                        Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat
+                        lorem ipsum dolor sit amet dolor consequat.</p>
+
+                </div>
+                <!-- #endregion - Image-->
+
+                <hr>
+
+                <!-- #region - Background-->
+                <h2>Background</h2>
+
+                <div class="grid">
+                    <div class="col bg-primary txt-center spacing-top-small">
+                        <h3>Primary </h3>
+                        <p>bg-primary</p>
+                    </div>
+                    <div class="col bg-secondary txt-center spacing-top-small">
+                        <h3>Secondary</h3>
+                        <p>bg-secondary</p>
+
+                    </div>
+                </div>
+                <!-- #endregion - Background-->
+
+                <hr>
+
+                <!-- #region - VIsubility-->
+                <h2>
+                    Visubility
+                </h2>
+                <div class="grid">
+                    <div class="col">
+                        <p>
+                            <span class='highlight'>//Visible when windows size is smaller then (xs, sm, md, lg)</span>
+                            <br>=================================================
+                            <br>
+                            <span class='highlight'>
+                                Classes:
+                            </span> <br>
+                            .xs-visible - .sm-visible - .md-visible - .lg-visible
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            <span class='highlight'>//Visible when windows size is larger then (xs, sm, md, lg)</span>
+                            <br>=================================================
+                            <br>
+                            <span class='highlight'>
+                                Classes:
+                            </span> <br>
+                            .xs-hidden - .sm-hidden - .md-hidden - .lg-hidden
+                        </p>
+                    </div>
+                </div>
+                <!-- #endregion - VIsubility-->
+
+                <hr>
+
+                <!-- #region - Iframe-->
+                <h2>Iframe</h2>
+
+                <div class="grid-2">
+                    <div class="col">
+                        <h3>
+                            4x3 Aspect Ratio
+                        </h3>
+                        <div class="iframe-wrapper-4x3">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160957.35604513585!2d5.1733825331130285!3d50.92448120237503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c12183ded75db7%3A0xf7cb7b027e7e2181!2sHasselt!5e0!3m2!1snl!2sbe!4v1537444926530"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>
+                            16x9 Aspect Ratio
+                        </h3>
+                        <div class="iframe-wrapper-16x9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160957.35604513585!2d5.1733825331130285!3d50.92448120237503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c12183ded75db7%3A0xf7cb7b027e7e2181!2sHasselt!5e0!3m2!1snl!2sbe!4v1537444926530"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <h3>
+                            Fixed 300 Height
+                        </h3>
+                        <div class="iframe-wrapper-300">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160957.35604513585!2d5.1733825331130285!3d50.92448120237503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c12183ded75db7%3A0xf7cb7b027e7e2181!2sHasselt!5e0!3m2!1snl!2sbe!4v1537444926530"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion - Iframe-->
+
+                <hr>
+
+                <!-- #region - EXTRA-->
+                <h2>
+                    Extra Features
+                </h2>
+                <h4>
+                    Default Background Image Style
+                </h4>
+                <p>
+                    <span class="highlight">Class:</span> .img-bg
+                </p>
+                <h4>
+                    Reset Spacing
+                </h4>
+                <p>
+                    <span class="highlight">Class for padding:</span> .padding-reset <br>
+                    <span class="highlight">Class for margin:</span> .margin-reset
+                </p>
+
+                <p>
+                    <span class="highlight">
+                        No break:
+                    </span>
+                    .nobr
+                </p>
+                <p>
+                    <span class="highlight">
+                        Uppercase:
+                    </span>
+                    .uppercase
+                </p>
+                <!-- #endregion - EXTRA-->
+
+                <hr>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+
+        </footer>
+
+    </div>
+
+    <script src="/static/js/general.min.js"></script>
+
+</body>
+
+</html>
